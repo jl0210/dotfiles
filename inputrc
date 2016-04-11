@@ -1,0 +1,14 @@
+# set vi as the default editor for readline
+set editing-mode vi
+
+$if mode=vi
+	# normal mode
+	set keymap vi-command
+	"gg": beginning-of-history
+	"G": end-of-history
+	# insert mode
+	set keymap vi-insert
+	# remap <Esc> to jj 
+	"jj": vi-movement-mode
+	"\C-x": clear-screen
+$endif
