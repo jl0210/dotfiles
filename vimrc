@@ -51,7 +51,6 @@ set shiftwidth=4
 set textwidth=80
 set completeopt-=preview
 set laststatus=2
-set omnifunc=syntaxcomplete#Complete
 autocmd FileType {cpp,java,python} set expandtab | set softtabstop=4
 autocmd BufWritePost *.py call Flake8()
 
@@ -240,6 +239,7 @@ let g:tmuxline_powerline_separators=0
 "------------------------------------------------------------------------
 
 
+"To activate Eclim functionality, be sure to execute :ProjectCreate /path/to/project -n {java,scala}
 let g:EclimCompletionMethod='omnifunc'
 " Terminate Eclim with :ShutdownEclim
 let java_highlight_functions='style'
