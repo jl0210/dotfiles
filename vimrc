@@ -52,7 +52,7 @@ set textwidth=80
 set completeopt-=preview
 set laststatus=2
 set omnifunc=syntaxcomplete#Complete
-autocmd FileType python set expandtab | set softtabstop=4
+autocmd FileType {cpp,java,python} set expandtab | set softtabstop=4
 autocmd BufWritePost *.py call Flake8()
 
 set t_Co=256
@@ -67,14 +67,14 @@ set t_Co=256
 "colorscheme dark-ruby
 
 " default dark
-colorscheme darkspectrum
+"colorscheme darkspectrum
 
 " bright colorschemes
-"colorscheme campfire
 "colorscheme cascadia
+"colorscheme ashen
 
 " default bright
-"colorscheme ashen
+colorscheme campfire
 
 "django
 
@@ -99,7 +99,7 @@ endfunction
 
 "Switch to a light colorscheme
 function! Light()
-	colorscheme ashen
+	colorscheme campfire
 endfunction
 
 
@@ -162,6 +162,7 @@ let g:ctrlp_cmd = 'CtrlP'
 "------------------------------------------------------------------------
 
 
+let delimitMate_expand_cr = 1
 "<C-Space> jumps over current delimiter
 imap <C-Space> <Plug>delimitMateS-Tab
 
