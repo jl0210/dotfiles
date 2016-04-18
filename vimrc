@@ -66,14 +66,14 @@ set t_Co=256
 "colorscheme dark-ruby
 
 " default dark
-"colorscheme darkspectrum
+colorscheme darkspectrum
 
 " bright colorschemes
 "colorscheme cascadia
 "colorscheme ashen
 
 " default bright
-colorscheme campfire
+"colorscheme campfire
 
 "django
 
@@ -239,7 +239,9 @@ let g:tmuxline_powerline_separators=0
 "------------------------------------------------------------------------
 
 
-"To activate Eclim functionality, be sure to execute :ProjectCreate /path/to/project -n {java,scala}
+" To activate Eclim functionality, be sure to execute :ProjectCreate /path/to/project -n {java,scala}
+" To activate Eclim functionality in a Maven Project, see the following link
+"http://eclim.org/gettingstarted.html#gettingstarted-maven
 let g:EclimCompletionMethod='omnifunc'
 " Terminate Eclim with :ShutdownEclim
 let java_highlight_functions='style'
