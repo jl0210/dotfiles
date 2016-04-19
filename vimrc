@@ -47,11 +47,12 @@ set nomodeline
 set number
 set nofoldenable
 set tabstop=4
+set expandtab
+set softtabstop=4
 set shiftwidth=4
 set textwidth=80
 set completeopt-=preview
 set laststatus=2
-autocmd FileType {cpp,java,python} set expandtab | set softtabstop=4
 autocmd BufWritePost *.py call Flake8()
 
 set t_Co=256
@@ -84,21 +85,21 @@ colorscheme darkspectrum
 
 
 " Toggle number on/off (number toggle)
- noremap <Leader>nt :set number!<CR>
+noremap <Leader>nt :set number!<CR>
 
 " Remove trailing whitespace
 function! RemoveWhiteSpace()
-	%s/\s\+$//e
+    %s/\s\+$//e
 endfunction
 
 " Switch to a dark colorscheme
 function! Dark()
-	colorscheme darkspectrum
+    colorscheme darkspectrum
 endfunction
 
 "Switch to a light colorscheme
 function! Light()
-	colorscheme campfire
+    colorscheme campfire
 endfunction
 
 
@@ -172,13 +173,13 @@ imap <C-Space> <Plug>delimitMateS-Tab
 
 
 let g:rbpt_colorpairs = [
-	\ ['brown',       'RoyalBlue3'],
-	\ ['darkred',     'SeaGreen3'],
-	\ ['darkgreen',   'RoyalBlue3'],
-	\ ['Darkblue',    'firebrick3'],
-	\ ['gray',        'RoyalBlue3'],
-	\ ['darkcyan',    'SeaGreen3'],
-	\]
+            \ ['brown',       'RoyalBlue3'],
+            \ ['darkred',     'SeaGreen3'],
+            \ ['darkgreen',   'RoyalBlue3'],
+            \ ['Darkblue',    'firebrick3'],
+            \ ['gray',        'RoyalBlue3'],
+            \ ['darkcyan',    'SeaGreen3'],
+            \]
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
