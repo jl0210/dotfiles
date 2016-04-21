@@ -70,11 +70,11 @@ set t_Co=256
 colorscheme darkspectrum
 
 " bright colorschemes
-"colorscheme cascadia
+"colorscheme campfire
 "colorscheme ashen
 
 " default bright
-"colorscheme campfire
+"colorscheme cascadia
 
 "django
 
@@ -84,8 +84,6 @@ colorscheme darkspectrum
 "========================================================================
 
 
-" Toggle number on/off (number toggle)
-noremap <Leader>nt :set number!<CR>
 
 " Remove trailing whitespace
 function! RemoveWhiteSpace()
@@ -126,6 +124,12 @@ noremap <Right> <nop>
 
 " Map RemoveWhiteSpace to <Leader>rw
 nnoremap <Leader>rw :call RemoveWhiteSpace()<CR>
+
+" Toggle number on/off (number toggle)
+nnoremap <Leader>nt :set number!<CR>
+
+" Toggle RainbowParentheses on/off
+nnoremap <Leader>parentheses :RainbowParenthesesToggle<CR>
 
 " Map Dark to <Leader>dark
 nnoremap <Leader>dark :call Dark()<CR>
@@ -181,7 +185,7 @@ let g:rbpt_colorpairs = [
             \ ['darkcyan',    'SeaGreen3'],
             \]
 
-au VimEnter * RainbowParenthesesToggle
+"au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
