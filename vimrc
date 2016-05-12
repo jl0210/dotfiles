@@ -91,10 +91,11 @@ function! RemoveWhiteSpace()
 endfunction
 
 " Visual cleanup for pasting
-function! ToggleVisualCleanup()
+function! ToggleNicePaste()
     set foldcolumn=0
     set number!
     set list!
+    set paste!
 endfunction
 
 " Switch to a dark colorscheme
@@ -132,8 +133,8 @@ noremap <Right> <nop>
 " Map RemoveWhiteSpace to <Leader>rw
 nnoremap <Leader>rw :call RemoveWhiteSpace()<CR>
 
-" Map ToggleVisualCleanup to <Leader>v
-nnoremap <Leader>v :call ToggleVisualCleanup()<CR>
+" Map ToggleNicePaste to <Leader>p
+nnoremap <Leader>p :call ToggleNicePaste()<CR>
 
 " Toggle RainbowParentheses on/off
 nnoremap <Leader>parentheses :RainbowParenthesesToggle<CR>
