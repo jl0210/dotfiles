@@ -6,34 +6,38 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Use Vundle to manage Bundles
-Bundle 'gmarik/vundle'
-" Bundles to install
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'Raimondi/delimitMate'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-fugitive'
-Bundle 'majutsushi/tagbar'
-Bundle 'a.vim'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'nvie/vim-flake8'
-Bundle 'octol/vim-cpp-enhanced-highlight'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'vim-scripts/CSApprox'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'derekwyatt/vim-scala'
+" Use Vundle to manage Plugins
+Plugin 'VundleVim/Vundle.vim'
+" Plugins to install
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-fugitive'
+Plugin 'majutsushi/tagbar'
+Plugin 'a.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-scripts/CSApprox'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'derekwyatt/vim-scala'
+
+
+" All plugins to install must be above this line
+call vundle#end()
 
 
 "========================================================================
@@ -45,6 +49,7 @@ filetype plugin indent on
 syntax on
 set nomodeline
 set number
+set relativenumber
 set nofoldenable
 set tabstop=4
 set expandtab
@@ -94,7 +99,7 @@ endfunction
 function! ToggleNicePaste()
     set foldcolumn=0
     set number!
-    set list!
+    set relativenumber!
     set paste!
 endfunction
 
